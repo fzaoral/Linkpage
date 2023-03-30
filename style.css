@@ -1,0 +1,172 @@
+:root {
+ --cor-de-fundo: #222222;
+ --cor-de-fundo-link: #ffffff;
+ --cor-texto-link: #222;
+ --filtro-interruptor: grayscale(1) opacity(0.25);
+ --cor-nome: #ffffff;
+ --cor-profissao: #ffffff;
+ --cor-rodape: #ffffff;
+ --cor-icones: #222;
+ --cor-sombra: #fff;
+}
+
+.tema-claro {
+    --cor-de-fundo: #ffffff;
+    --cor-de-fundo-link: #222222;
+    --cor-texto-link: #ffffff;
+    --filtro-interruptor: grayscale(0) opacity(1);
+    --cor-nome: #222;
+    --cor-profissao: #222;
+    --cor-rodape: #222;
+    --cor-icones: #fff;
+    --cor-sombra: #222;
+}  
+
+* {
+    margin: 0;
+    padding: 0;
+    touch-action: manipulation;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--cor-de-fundo);
+    -webkit-font-smoothing: antialiased;
+    transition: 0.3s;
+}
+
+.secao-principal {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* TOPO */
+
+.topo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topo__interruptor {
+    position: absolute;
+    top: 30px;
+    right: 30px;    
+    border-radius: 100%;
+    border: none;
+    background: #ffffff;
+    width: 50px;
+    height: 50px;
+
+    filter: var(--filtro-interruptor); 
+    cursor: pointer;
+}
+
+.topo__foto-perfil {
+    margin-top: 60px;
+    width: 100px;
+    border: 4px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 10px var(--cor-sombra);
+}
+
+.topo__nome {
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--cor-nome);  
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+.topo__profissao {
+    font-weight: bold;
+    margin-top: 4px;
+    color: var(--cor-profissao); 
+    transition: 0.3s;
+} 
+
+.topo__profissao__desc {
+    font-style: italic;
+    color: var(--cor-profissao); 
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+/* LINKS */
+.links {
+    margin: 30px 30px 0 30px;
+}
+
+.links__links {
+    position: relative;
+    margin-bottom: 15px;
+    height: 52px;
+    border-radius: 3px;
+    box-shadow: 0 5px 5px var(--cor-sombra);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--cor-de-fundo-link);
+    color: var(--cor-texto-link);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.links__icon {
+    color: var(--cor-icones);
+    position: absolute;
+    left: 19px;
+    font-size: 22px;
+
+}
+
+.links__links:hover {
+    filter: brightness(0.75)
+}
+
+/* RODAPE */
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.rodape__pergunta {
+    color: var(--cor-rodape); 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.rodape__convite {
+    color: var(--cor-rodape); 
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+.rodape__convite:hover {
+    filter: brightness(0.75);
+    transition: 0.3s;
+}
+
+
+.rodape__icon {
+    margin-top: 50px;
+    font-size: 30px;
+}
+.rodape__icon:hover {
+    filter: brightness(0.75);
+    transition: 0.3s;
+}
+.rodape__icon__whatsapp {
+    color: var(--cor-rodape); 
+    text-decoration: none;
+    transition: 0.3s;
+}
